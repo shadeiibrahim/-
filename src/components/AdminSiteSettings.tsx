@@ -58,6 +58,7 @@ export const AdminSiteSettings: React.FC<AdminSiteSettingsProps> = ({
   };
 
   // Upload Logo
+   // Upload Logo
   const handleLogoUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -69,30 +70,13 @@ export const AdminSiteSettings: React.FC<AdminSiteSettingsProps> = ({
 
     setIsUploadingLogo(true);
     const reader = new FileReader();
-    reader.onload = async () => {
+    reader.onload = () => {
       try {
-        const base64 = (reader.result as string).split(',')[1];
-        const res = await fetch('/api/upload', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${localStorage.getItem('arkan_admin_token') || ''}`,
-          },
-          body: JSON.stringify({
-            data: base64,
-            filename: file.name,
-            mimeType: file.type,
-          }),
-        });
-        const json = await res.json();
-        if (json.url) {
-          handleChange('logoUrl', json.url);
-          setStatusMsg({ type: 'success', text: 'تم رفع صورة الشعار بنجاح! لا تنس الضغط على حفظ التغييرات' });
-        } else {
-          alert(json.error || 'فشل رفع الصورة');
-        }
+        const dataUrl = reader.result as string;
+        handleChange('logoUrl', dataUrl);
+        setStatusMsg({ type: 'success', text: 'تم اختيار صورة الشعار بنجاح! اضغط الآن على زر حفظ التغييرات بالأسفل' });
       } catch (err: any) {
-        alert('حدث خطأ أثناء رفع الصورة: ' + err.message);
+        alert('حدث خطأ أثناء معالجة الصورة: ' + err.message);
       } finally {
         setIsUploadingLogo(false);
       }
