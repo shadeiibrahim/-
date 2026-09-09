@@ -1,0 +1,8 @@
+{
+  "name": "Remix أركان للتسويق العقاري",
+  "description": "موقع أركان للتسويق العقاري - غيّرنا شكل السمسرة. شقق سكن طلابي لجامعة سيناء وعقارات عائلية وتجارية بالبلد بعمولة 0% من المستأجر.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
