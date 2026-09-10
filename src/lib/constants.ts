@@ -81,7 +81,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   transportCategories: [
     {
       id: 'transport',
-      icon: 'bus',
+      icon: '🚌',
       title: 'مواصلات الجامعة والخطوط',
       badge: 'بوابات ومواقف',
       places: [
