@@ -114,7 +114,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     },
     {
       id: 'restaurants',
-      icon: 'utensils',
+      icon: '🍽️',
       title: 'مطاعم وكافيهات للمذاكرة',
       badge: 'وجبات وواي فاي',
       places: [
@@ -125,7 +125,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     },
     {
       id: 'laundry',
-      icon: 'shirt',
+      icon: '🧺',
       title: 'مغاسل ودراي كلين',
       badge: 'تنظيف وكي',
       places: [
