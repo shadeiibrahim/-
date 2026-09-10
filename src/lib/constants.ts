@@ -92,7 +92,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     },
     {
       id: 'markets',
-      icon: 'shopping-cart',
+      icon: '🛒',
       title: 'سوبر ماركت وبقالة',
       badge: 'احتياجات يومية',
       places: [
@@ -103,7 +103,7 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
     },
     {
       id: 'pharmacies',
-      icon: 'pill',
+      icon: '💊',
       title: 'صيدليات وخدمات طبية',
       badge: 'طوارئ 24/7',
       places: [
